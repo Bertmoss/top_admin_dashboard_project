@@ -1,0 +1,89 @@
+body {
+  height: 100vh;
+  margin: 0%;
+  display: grid;
+  grid-template: 1fr 7fr 0.2fr/ 1fr 3fr;
+}
+
+body > * {
+  border: solid 2px black;
+}
+
+/*header*/
+
+header {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+  display: grid;
+  grid-template: 1fr 1fr/ 3fr 1fr;
+}
+.lower-header > h3,
+.lower-header > h4 {
+  margin: 0%;
+}
+
+/* Side bar*/
+
+nav {
+  padding-left: 50px;
+  max-height: 70%;
+  grid-column: 1/2;
+  grid-row: 1/-2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr repeat(9, minmax(20px, 1fr));
+  gap: 15px;
+  align-content: space-evenly;
+}
+
+/* Main Section*/
+main {
+  grid-column: 2/-1;
+  grid-row: 2/-2;
+  display: grid;
+  grid-template: 1fr 1fr /3fr 1fr;
+}
+
+/*projects section */
+.projects {
+  grid-column: 1;
+  grid-row: 1/-1;
+}
+.projects > h3 {
+  padding-left: 20px;
+}
+.projects > div {
+  padding: 0px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  align-content: space-evenly;
+  justify-items: center;
+}
+.projects > div > div {
+  padding: 5px 20px;
+  min-height: 200px;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-align: justify;
+}
+/*announcements section*/
+
+.announcements {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.announcements p,
+.trending p {
+  font-size: 12px;
+}
+
+.trending {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+footer {
+  grid-column: 1 /-1;
+  grid-row: -1/-2;
+}
