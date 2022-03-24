@@ -22,11 +22,44 @@ header {
   grid-column: 2/-1;
   grid-row: 1/2;
   display: grid;
-  grid-template: 1fr 1fr/ 3fr 1fr;
+  grid-template: 1fr 1fr/ 2fr 1fr;
 }
 .lower-header > h3,
 .lower-header > h4 {
   margin: 0%;
+}
+.upper-header {
+  display: flex;
+  align-items: center;
+  padding: 0px 15% 0px 50px;
+  position: relative;
+}
+input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: solid 1px black;
+  border-radius: 15px;
+  height: 25px;
+  flex-grow: 1;
+  padding-left: 15px;
+}
+
+/*moves the search label above the input and makes it disappear when input is focuses */
+
+label[for=search] {
+  position: absolute;
+  left:60px;
+  opacity: 0.3;
+}
+input[type="search"]:focus + label{
+  opacity: 0;
+}
+
+label[for=search] + span::before {
+  position: absolute;
+  content: url(/images/magnify.svg);
+  left: 20px;
+  top: 19px;
 }
 
 
