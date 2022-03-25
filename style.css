@@ -31,9 +31,23 @@ header {
 .upper-header {
   display: flex;
   align-items: center;
-  padding: 0px 15% 0px 50px;
   position: relative;
+  gap: 10px;
 }
+.right-header {
+  padding-right: 20px;
+}
+.left-header {
+  padding-left: 20px;
+  
+}
+
+
+/* Left upper header */
+.upper-header.left-header {
+  padding: 0px 15% 0px 50px;
+}
+
 input[type="search"] {
   -webkit-appearance: none;
   appearance: none;
@@ -42,6 +56,11 @@ input[type="search"] {
   height: 25px;
   flex-grow: 1;
   padding-left: 15px;
+}
+/* right upper header */
+.upper-header.right-header{
+  justify-content: flex-end;
+  
 }
 
 /*moves the search label above the input and makes it disappear when input is focuses */
