@@ -9,18 +9,21 @@
   </head>
   <body>
     <header>
-      <div class="upper-header left-header">
-        <input type="search" name="search-bar" id="search" />
+      <form class="upper-header left-header" action="" method="get">
+        <input type="search" name="search-bar" id="search"  placeholder=" "/>
         <label for="search">Search</label>
-        <span></span>
-      </div>
+        <button type="submit">Search Submit</button>
+      </form>
       <div class="upper-header right-header">
         <img src="/images/bell-ring-outline.svg" alt="notification bell">
-        <img src="/images/account-tie.svg" alt="account profile picture">
+        <img src="/images/account-tie.svg" alt="account profile icon">
         <h4>Morgan Oakley</h4>
       </div>
       <div class="lower-header left-header">
-        <h4>Hi there</h4>
+        <svg alt="account profile icon"  viewBox="0 0 24 24">
+          <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+      </svg>
+        <h5>Hi there,</h5>
         <h3>Morgan</h3>
       </div>
       <div class="lower-header right-header">

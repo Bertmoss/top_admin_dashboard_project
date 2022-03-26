@@ -24,11 +24,9 @@ header {
   display: grid;
   grid-template: 1fr 1fr/ 2fr 1fr;
 }
-.lower-header > h3,
-.lower-header > h4 {
-  margin: 0%;
-}
-.upper-header {
+
+.upper-header,
+.lower-header {
   display: flex;
   align-items: center;
   position: relative;
@@ -42,9 +40,8 @@ header {
   
 }
 
-
 /* Left upper header */
-.upper-header.left-header {
+.upper-header.left-header  {
   padding: 0px 15% 0px 50px;
 }
 
@@ -57,13 +54,19 @@ input[type="search"] {
   flex-grow: 1;
   padding-left: 15px;
 }
-/* right upper header */
-.upper-header.right-header{
-  justify-content: flex-end;
-  
+.upper-header button[type="submit"] {
+  position: absolute;
+  left: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  background-image: url(/images/magnify.svg);
+  text-indent: -9999px; /* Hides the search text */
 }
-
-/*moves the search label above the input and makes it disappear when input is focuses */
+/*moves the search label above the input and makes it disappear when input is focused or has value*/
 
 label[for=search] {
   position: absolute;
@@ -74,12 +77,34 @@ input[type="search"]:focus + label{
   opacity: 0;
 }
 
-label[for=search] + span::before {
-  position: absolute;
-  content: url(/images/magnify.svg);
-  left: 20px;
-  top: 19px;
+input[type="search"]:not(:placeholder-shown) + label {
+  opacity: 0;
 }
+
+/* right upper header */
+.upper-header.right-header{
+  justify-content: flex-end;
+  
+}
+/* lower left header */
+.lower-header.left-header {
+  flex-flow: column;
+  gap: 0px;
+  justify-content: center;
+  align-items: start;
+}
+.lower-header > h3,
+.lower-header > h5 {
+  margin: 0%;
+  padding-left: 50px;
+}
+.lower-header > svg {
+  position: absolute;
+  width:40px;
+  height:40px;
+}
+
+
 
 
 /* Side bar*/
@@ -133,8 +158,6 @@ main > h3 {
 .projects {
   grid-column: 1;
   grid-row: 2/-2;
-
-  /* padding: 0px 20px; */
 }
 .projects > div {
   height: 100%;
