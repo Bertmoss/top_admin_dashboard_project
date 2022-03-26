@@ -63,7 +63,7 @@ input[type="search"] {
   height: 20px;
   border: none;
   background: none;
-  background-image: url(/images/magnify.svg);
+  background-image: url(/images/search-icon.svg);
   text-indent: -9999px; /* Hides the search text */
 }
 /*moves the search label above the input and makes it disappear when input is focused or has value*/
@@ -118,7 +118,7 @@ nav {
   padding-left: 50px;
   max-height: 70%;
   grid-column: 1/2;
-  grid-row: 1/-2;
+  grid-row: 1/-1;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -146,7 +146,7 @@ li {
 /* Main Section*/
 main {
   grid-column: 2/-1;
-  grid-row: 2/-2;
+  grid-row: 2/-1;
   display: grid;
   grid-template: 1fr 12fr 1fr /3fr 1fr;
   gap: 20px;
@@ -209,20 +209,19 @@ main > h3 {
   align-self: center;
 }
 .card-style.announcement > div {
-  margin: 25px;
+  margin: 10px 25px;
   border-bottom: 1px solid black;
   padding-bottom: 25px;
 }
 
 .card-style.announcement > div:last-child {
   border: none;
-  padding-bottom: 0px;
 }
 .card-style.announcement > div > * {
   margin: 0px;
 }
 .card-style.announcement p {
-     font-size: 12px;
+  font-size: 12px;
 }
 
 /*trending section*/
@@ -231,17 +230,8 @@ main > h3 {
 .trending > .card-style {
   margin-right: 20px;
 }
-/* .trending > h3 {
-  margin-top: 0px;
-} */
+
 ul * {
   padding: 0%;
   list-style-type: none; 
-}
-
-
-
-footer {
-  grid-column: 1 /-1;
-  grid-row: -1/-2;
 }
